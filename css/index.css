@@ -1,0 +1,147 @@
+/* =============================================  Slider  */
+.slider {
+  display: block;
+  height: 665px;
+  width: 100%;
+  background: #e8e8e8;
+}
+
+.slider-bg {
+  height: 100%;
+  background: url(../img/slider/slide-01.jpg);
+}
+
+.slider-bg h1 {
+  color: #222222;
+  font-size: 40px;
+  line-height: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: 14px solid #f16d7f;
+  padding-left: 15px;
+}
+
+.slider-bg h1 .title-big {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 42px;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  display: block;
+}
+
+.slider-bg h1 .title-red {
+  color: #f16d7f;
+}
+
+/* =============================================  Category  */
+.category {
+  margin-top: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 900px;
+}
+
+.category-box {
+  position: relative;
+  margin: 20px 20px 0 0;
+}
+
+.category-box:hover {
+  cursor: pointer;
+}
+
+.category-box:hover img {
+  opacity: 0.5;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.category-box-title {
+  font-size: 18px;
+  padding: 17px 20px;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 25px;
+}
+
+.category-box-title-red {
+  font-size: 30px;
+  display: block;
+  color: #f16d7f;
+}
+
+/* =============================================  Feature (v.1.0)  */
+.feature {
+  display: flex;
+}
+
+.feature-title {
+  display: block;
+  width: 767px;
+  height: 529px;
+  background: #222222 url(../img/feature/feature.jpg) 0 0 no-repeat;
+}
+
+.feature-title h2 {
+  position: relative;
+  top: 146px;
+  left: 39px;
+  width: 60%;
+  color: #ffffff;
+  font-size: 54px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.feature-title h2 .offer {
+  color: #f16d7f;
+}
+
+.feature-title h2 .forwomen {
+  display: block;
+  font-size: 32px;
+  letter-spacing: 0.9px;
+}
+
+.feature-sidebox {
+  display: block;
+  float: left;
+  width: 370px;
+  padding: 10px 30px 0 111px;
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.feature-sidebox ul {
+  list-style: none;
+}
+
+.feature-sidebox ul li {
+  margin-bottom: 10px;
+}
+
+.feature-sidebox ul li img {
+  position: relative;
+  top: 35px;
+  left: -78px;
+}
+
+.feature-sidebox ul li h3 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.feature-sidebox ul li p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.35px;
+}
