@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Brand - Products page</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/range.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/product.css">
   </head>
   <body>
     <header class="header">
@@ -237,7 +237,7 @@
               </fieldset>
               <fieldset>
                 <legend>Price</legend>
-                <input id="range" type="range" value="1" step="10" />
+                <input id="range" type="range" min="0" max="1000" value="0" step="10" />
                 <br>
                 <p class="price-range">$<output name="result" for="range">0</output></p>
               </fieldset>
@@ -336,14 +336,16 @@
               </div>
 
                 <div class="pagination">
-                  <a href="#">&laquo;</a>
+                  <a href="#"><i class="fas fa-angle-left"></i></a>
                   <a href="#">1</a>
                   <a href="#" class="active">2</a>
                   <a href="#">3</a>
-                  <a href="#">...</a>
+                  <a href="#">4</a>
                   <a href="#">5</a>
                   <a href="#">6</a>
-                  <a href="#">&raquo;</a>
+                  <a href="#">...</a>
+                  <a href="#">20</a>
+                  <a href="#"><i class="fas fa-angle-right"></i></a>
                 </div>
 
             </section>
