@@ -1,0 +1,275 @@
+/* =============================================  Product page (v.1.0)  */
+.breadcrumb
+  @extend .flex-box
+  margin: 51px 0 0
+  width: 100%
+  height: 148px
+  background-color: lighten($pink, 28%)
+  &-name
+    color: $pink
+    font-size: 24px
+    font-weight: 900
+    line-height: 20px
+    text-transform: uppercase
+  &-path a
+    +font-prop(14px, 300, uppercase)
+    text-decoration: none
+    color: #636363
+    span
+      color: $pink
+      font-weight: 700
+
+/* =============================================  Product page - Navigation (v.1.0)  */
+.side-nav
+  display: block
+  width: 261px
+  margin-right: 30px
+  margin-top: 100px
+
+summary
+  @extend .flex-box
+  +font-prop(14px, 700, uppercase)
+  height: 37px
+  line-height: 37px
+  padding-left: 10px
+  border-left: 5px solid #ef5b70
+  border-bottom: 1px solid #ebebeb
+  color: #222222
+  &::-webkit-details-marker
+    display: none
+  &::after
+    content: '\25B2'
+    padding-left: 0.5em
+    color: #222222
+    font-size: 10px
+
+details
+  +font-prop(14px, 400, none)
+  color: #6f6e6e
+  line-height: 33px
+  ul li:last-child
+    margin-bottom: 30px
+  &[open] > summary::after
+    content: '\25BC'
+    color: #ef5b70
+  &[open] > summary
+    color: #ef5b70
+
+/* =============================================  Product page - Filters (v.1.0)  */
+#range
+  width: 100%
+
+fieldset
+  display: inline-block
+  width: 263px
+  border: 0
+  ul li
+    display: inline-block
+    list-style: none
+    a
+      +font-prop(14px, 400, none)
+      color: #6f6e6e
+      line-height: 26px
+      padding: 5px 10px 5px 0
+      &:hover
+        color: $pink
+  ul span
+    color: #dfdfdf
+    margin-right: 10px
+
+legend
+  +font-prop(14px, 700, uppercase)
+  color: #6f6e6e
+  margin-bottom: 20px
+
+label
+  +font-prop(14px, 400, uppercase)
+  display: inline-block
+  width: 56px
+  color: #6f6e6e
+  line-height: 15px
+  position: relative
+  padding-left: 20px
+  margin-bottom: 15px
+  &:hover input ~ .check
+    background-color: #ccc
+  input:checked ~ .check
+    background-color: #ef5b70
+
+.check
+  position: absolute
+  top: 2px
+  left: 0
+  height: 13px
+  width: 13px
+  background-color: $light
+  border: 1px solid #ebebeb
+
+/* =============================================  Product page - Range (v.1.0)  */
+
+.price-range
+  color: #6f6e6e
+  font-size: 14px
+  font-weight: 400
+  line-height: 15px
+
+input[type=range]
+  height: 20px
+  -webkit-appearance: none
+  margin: 5px 0
+  width: 100%
+
+input[type=range]:focus
+  outline: none
+
+input[type=range]::-webkit-slider-runnable-track
+  width: 100%
+  height: 6px
+  cursor: pointer
+  animate: 0.2s
+  box-shadow: 0 0 0 $light
+  background: #F0F0F0
+  border-radius: 3px
+  border: 0 solid $light
+
+input[type=range]::-webkit-slider-thumb
+  box-shadow: 0 0 0 $light
+  border: 0 solid $light
+  height: 14px
+  width: 14px
+  border-radius: 10px
+  background: $pink
+  cursor: pointer
+  -webkit-appearance: none
+  margin-top: -4px
+
+input[type=range]:focus::-webkit-slider-runnable-track
+  background: #F0F0F0
+
+input[type=range]::-moz-range-track
+  width: 100%
+  height: 6px
+  cursor: pointer
+  animate: 0.2s
+  background: #F0F0F0
+  border-radius: 3px
+
+input[type=range]::-moz-range-thumb
+  box-shadow: 0 0 0 $light
+  border: 0 solid $light
+  height: 14px
+  width: 14px
+  border-radius: 10px
+  background: $pink
+  cursor: pointer
+
+input[type=range]::-ms-track
+  width: 100%
+  height: 6px
+  cursor: pointer
+  animate: 0.2s
+  background: transparent
+  border-color: transparent
+  color: transparent
+
+input[type=range]::-ms-fill-lower
+  background: #F0F0F0
+  border-radius: 6px
+
+input[type=range]::-ms-fill-upper
+  background: #F0F0F0
+  border-radius: 6px
+
+input[type=range]::-ms-thumb
+  margin-top: 1px
+  height: 14px
+  width: 14px
+  border-radius: 10px
+  background: $pink
+  cursor: pointer
+
+input[type=range]:focus::-ms-fill-lower
+  background: #F0F0F0
+
+input[type=range]:focus::-ms-fill-upper
+  background: #F0F0F0
+
+/* =============================================  Product page - Sort (v.1.0)  */
+
+.sort-block
+  width: 100%
+  margin-top: 30px
+  background-color: #f3f3f3
+  p
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 30px
+    display: inline-block
+    border: 1px solid #ebebeb
+    background-color: $light
+    margin: 10px 0 10px 10px
+    padding: 0 13px
+  select
+    color: #6f6e6e
+    font-size: 16px
+    display: inline-block
+
+/* =============================================  Product page - Pagination (v.1.0)  */
+
+.bottom-wide
+  width: 100%
+
+.pagination
+  margin: 50px 0
+  display: inline-block
+  border: 1px solid #ddd
+  a
+    color: #c4c4c4
+    font-size: 16px
+    font-weight: 700
+    float: left
+    padding: 8px
+    text-decoration: none
+    transition: background-color .3s
+    &.active
+      color: #f16d7f
+    &:hover:not(.active)
+      color: $light
+      background-color: $pink
+
+.viewall-btn
+  +font-prop(16px, 700, none)
+  background-color: $light
+  color: $pink
+  margin: 50px 0
+  padding: 15px 45px
+  text-align: center
+  letter-spacing: 0.4px
+  outline: none
+  border: 2px solid $pink
+  border-radius: 5px
+  &:hover
+    background-color: $pink
+    color: $light
+    border: 2px solid $light
+    cursor: pointer
+
+/* =============================================  Product page - Pagination (v.1.0)  */
+
+.featurebox
+  width: 100%
+  background-color: $dark
+  &-item
+    width: 320px
+    text-align: center
+    color: $light
+    margin: 90px 15px
+    h3
+      +font-prop(20px, 700, none)
+      letter-spacing: 0.5px
+      margin-bottom: 15px
+    p
+      +font-prop(14px, 300, none)
+      line-height: 20px
+      letter-spacing: 0.35px
