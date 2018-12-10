@@ -1,11 +1,51 @@
 .checkout
 	margin-top: 50px
+	&-form
+		width: $page-width/2
+	&-field
+		width: 390px
+		height: 45px
+		border: 1px solid $grey
+	&-button
+		+font-prop(14px, 700, uppercase)
+		display: block
+		width: 180px
+		padding: 15px
+		margin-top: 30px
+		margin-left: 35px
+		border: 1px solid $dark
+		background-color: $light
+		color: $dark
+		cursor: pointer
+		&:hover
+			border: 1px solid $pink
+			color: $pink
 .checkout-block
-	padding: 30px 0
+	padding: 33px 0
 	border-bottom: 1px solid $grey
 	h3
 		+font-prop(16px, 700, uppercase)
 	h4
 		+font-prop(13px, 400, uppercase)
+		padding-left: 35px
+		padding-bottom: 15px
+		padding-top: 30px
 	p
 		color: darken($grey, 20%)
+		padding: 0 0 30px 35px
+	input
+		margin: 10px 0 10px 35px
+	span
+		+font-prop(12px, 400, uppercase)
+		color: $dark
+		margin: 10px
+	i
+		color: darken($grey, 20%)
+		padding: 10px 5px 10px 35px
+	a
+		+font-prop(13px, 400, none)
+		color: darken($grey, 20%)
+	&-content
+		display: flex
+		justify-content: space-between
+		align-items: flex-start

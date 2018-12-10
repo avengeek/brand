@@ -15,7 +15,7 @@
 	width: 849px
 	margin-top: 100px
 
-.flex-center
+.flex-center 
 	display: flex
 	align-items: center
 
@@ -46,6 +46,9 @@
 		border: 2px solid $pink
 		cursor: pointer
 
+.hidden
+	display: none
+	
 /* ==== верхний слой блока header ==== */
 
 .top-header
@@ -54,6 +57,7 @@
 .top-left-header
 	display: flex
 	justify-content: flex-start
+	align-items: center
 .top-right-header
 	display: flex
 	justify-content: flex-end
@@ -106,7 +110,7 @@
 		color: $dark
 		border: 1px solid $grey
 		border-radius: 0 3px 3px 0
-		padding: 10px
+		padding: 9px 10px 11px
 	&__list
 		top: 43px
 		left: -10px
@@ -128,6 +132,7 @@
 .dropdown
 	position: relative
 	display: inline-block
+	height: 41px
 	&:hover .dropdown-content
 		display: block
 	&-content
@@ -232,7 +237,7 @@
 		span
 			float: right
 	button
-		+font-prop(14x, 700, uppercase)
+		+font-prop(14px, 700, uppercase)
 		width: 100%
 		padding: 15px
 		margin-bottom: 10px
@@ -255,6 +260,7 @@
 		margin-left: 10px
 
 /* ==== Главное меню ==== */
+
 .header__nav
 	position: absolute
 	top: 100px
@@ -302,12 +308,12 @@ nav ul li
 			float: left
 			padding-right: 15px
 
-/* =============================================  Product (v.1.0)  */
+/* ==== Product (v.1.0)  */
 .product
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
-	& a
+	a
 		text-decoration: none
 	&-title
 		+font-prop(30px, 700, none)
@@ -330,18 +336,7 @@ nav ul li
 		background-color: $light
 		position: relative
 		z-index: 1
-		&:hover
-			box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
-		&:hover:before
-			content: ''
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height: 283px
-			background: lighten($dark, 10%)
-			opacity: 0.8
-			z-index: 2
+		box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
 		.basket
 			width: 27px
 			height: 25px
@@ -358,12 +353,6 @@ nav ul li
 			color: $light
 			line-height: 42px
 			cursor: pointer
-		&:hover button
-			display: block
-			position: absolute
-			top: 100px
-			left: 70px
-			z-index: 3
 		&-name
 			+font-prop(13px, 400, uppercase)
 			color: $dark
@@ -375,8 +364,49 @@ nav ul li
 			color: $pink
 			line-height: 20px
 			padding: 0 15px 15px
+		&:hover:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 283px
+			background: lighten($dark, 10%)
+			opacity: 0.8
+			z-index: 2
+		&:hover button
+			display: block
+			position: absolute
+			top: 100px
+			left: 70px
+			z-index: 3
 
-/* =============================================  Кнопка Browse all products (v.1.0)  */
+/* ==== Кнопка Browse all products (v.1.0)  */
+
+@keyframes anim
+	0%
+		background-color: $pink
+		color: $light
+	10%
+		background-color: $light
+		color: $pink
+		border-radius: 15px
+	80%
+		background-color: $pink
+		color: $light
+		border-radius: 30px
+	100%
+		background-color: $light
+
+@keyframes anim2
+	0%
+		transform: rotate(0deg) scale(1)
+	50%
+		transform: rotate(210deg) scale(1.5)
+	75%
+		transform: rotate(300deg) scale(2.0)
+	100%
+		transform: rotate(360deg) scale(1)
 .browse-products
 	+font-prop(16px, 700, none)
 	background-color: $pink
@@ -388,10 +418,16 @@ nav ul li
 	letter-spacing: 0.4px
 	outline: none
 	border: 2px solid $light
-	& i
+	i
 		margin: 10px
+	&:hover
+		animation: anim 0.5s
+		border-radius: 30px
+		i
+			animation: anim2 ease-out 1.5s
 
-/* =============================================  Subscribe (v.1.0)  */
+/* ==== Subscribe (v.1.0)  */
+
 .subscribe
 	background: #f2f2f2 url(../img/subscribe/subscribe-bg.jpg) center center no-repeat
 	height: 441px

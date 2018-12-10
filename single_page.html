@@ -17,8 +17,7 @@
         <p class="logo__text">Bran<span class="logo__text_pink">d</span></p>
       </a>
       <div class="search-from dropdown">
-        <button class="search-from__button">Browse<i class="fas fa-caret-down"></i></button>
-        <div class="search-from__list list-dropdown dropdown-content">
+        <button class="search-from__button">Browse<i class="fas fa-caret-down"></i></button><div class="search-from__list list-dropdown dropdown-content">
           <p class="title-dropdown">Women</p>
           <ul>
             <li><a href="#">Dresses</a></li>
@@ -40,8 +39,7 @@
             <li><a href="#">Blazers</a></li>
             <li><a href="#">Jackets/vests</a></li>
           </ul>
-        </div>
-        <input class="search-from__input" type="text" placeholder="Search for Item..."><a class="search-from__icon" href="#"><i class="fa fa-search"></i></a>
+        </div><input class="search-from__input" type="text" placeholder="Search for Item..."><a class="search-from__icon" href="#"><i class="fa fa-search"></i></a>
       </div>
     </div>
 
@@ -180,41 +178,81 @@
   <p class="bp-material">MATERIAL: <span>COTTON</span></p>
   <p class="bp-designer">DESIGNER: <span>BINBURHAN</span></p>
   <p class="bp-price">$561</p>
+  
+  <div class="line-long"></div>
+
+  <div class="product-choose">
+    <div class="choose-block">
+      <p>CHOOSE COLOR</p>
+      <select name="product-clr" id="product-clr">
+        <option value="">White</option>
+        <option value="">Black</option>
+        <option value="">Grey</option>
+        <option value="">Pink</option>
+      </select>
+    </div>
+    <div class="choose-block">
+      <p>CHOOSE SIZE</p>
+      <select name="product-sz" id="product-sz">
+        <option value="">xxs</option>
+        <option value="">xs</option>
+        <option value="">s</option>
+        <option value="">m</option>
+        <option value="">l</option>
+        <option value="">xl</option>
+        <option value="">xxl</option>
+      </select>
+    </div>
+    <div class="choose-block">
+      <p>QUANTITY</p>
+      <select name="product-qty" id="product-qty">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+      </select>
+    </div>
+    <form class="single-page-form" method="get" action="shopping_cart.html">
+      <button class="single-page-form__btn" type="submit"><img class="bask" src="img/icons/basket-p.svg" alt="Add to Cart">Add to Cart</button>
+    </form>
+  </div>
+
 </div>
 
 <section class="container product blocks-margin">
   <h3 class="product-title">YOU MAY LIKE ALSO</h3>
   <a href="single_page.html">
-    <article class="product-box">
+    <div class="product-box">
       <img src="img/product/single1.jpg" alt="">
       <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
       <p class="product-box-name">BLAZE LEGGINGS</p>
       <p class="product-box-price">$52.00</p>
-    </article>
+    </div>
   </a>
   <a href="single_page.html">
-    <article class="product-box">
+    <div class="product-box">
       <img src="img/product/single2.jpg" alt="">
       <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
       <p class="product-box-name">ALEXA SWEATER</p>
       <p class="product-box-price">$52.00</p>
-    </article>
+    </div>
   </a>
   <a href="single_page.html">
-    <article class="product-box">
+    <div class="product-box">
       <img src="img/product/single3.jpg" alt="">
       <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
       <p class="product-box-name">AGNES TOP</p>
       <p class="product-box-price">$52.00</p>
-    </article>
+    </div>
   </a>
   <a href="single_page.html">
-    <article class="product-box">
+    <div class="product-box">
       <img src="img/product/single4.jpg" alt="">
       <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
       <p class="product-box-name">SYLVA SWEATER</p>
       <p class="product-box-price">$52.00</p>
-    </article>
+    </div>
   </a>
 </section>
 

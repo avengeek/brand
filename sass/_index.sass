@@ -33,11 +33,15 @@
   &-box
     position: relative
     margin: 20px 20px 0 0
+    img
+      transform: rotate(0deg)
+      transition: all 0.5s
     &:hover
       cursor: pointer
       img
         opacity: 0.5
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
+        transform: rotate(1deg) scale(1.03)
     &-title
       +font-prop(18px, 900, uppercase)
       padding: 17px 20px

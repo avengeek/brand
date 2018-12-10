@@ -197,6 +197,7 @@ input[type=range]:focus::-ms-fill-upper
 /* =============================================  Product page - Sort (v.1.0)  */
 
 .sort-block
+  @extend .flex-center
   width: 100%
   margin-top: 30px
   background-color: #f3f3f3
@@ -204,7 +205,7 @@ input[type=range]:focus::-ms-fill-upper
     color: #6f6e6e
     font-size: 14px
     font-weight: 400
-    line-height: 30px
+    line-height: 31px
     display: inline-block
     border: 1px solid #ebebeb
     background-color: $light
@@ -214,6 +215,9 @@ input[type=range]:focus::-ms-fill-upper
     color: #6f6e6e
     font-size: 16px
     display: inline-block
+    padding: 5px
+    border: 1px solid #ebebeb
+    box-shadow: none
 
 /* =============================================  Product page - Pagination (v.1.0)  */
 
@@ -242,7 +246,7 @@ input[type=range]:focus::-ms-fill-upper
   +font-prop(16px, 700, none)
   background-color: $light
   color: $pink
-  margin: 50px 0
+  margin: 50px 0 110px
   padding: 15px 45px
   text-align: center
   letter-spacing: 0.4px
@@ -255,16 +259,16 @@ input[type=range]:focus::-ms-fill-upper
     border: 2px solid $light
     cursor: pointer
 
-/* =============================================  Product page - Pagination (v.1.0)  */
+/* ==== Product page - Pagination (v.1.0) */
 
 .featurebox
   width: 100%
   background-color: $dark
   &-item
-    width: 320px
+    width: $page-width/3-60
     text-align: center
     color: $light
-    margin: 90px 15px
+    margin: 90px 15px 115px
     h3
       +font-prop(20px, 700, none)
       letter-spacing: 0.5px
@@ -273,3 +277,9 @@ input[type=range]:focus::-ms-fill-upper
       +font-prop(14px, 300, none)
       line-height: 20px
       letter-spacing: 0.35px
+  &-img
+    @extend .flex-center
+    height: 48px
+    margin-bottom: 25px
+    img
+      margin: 0 auto

@@ -73,3 +73,57 @@
 		width: 60px
 		border-top: 3px solid $pink
 		content: ""
+	&-long
+		border-top: 1px solid $grey
+		width: 640px
+		margin: 0 auto
+
+.choose-block
+	display: inline-block
+	width: 180px
+	text-align: left
+	select
+		width: 145px
+		color: #eaeaea
+		font-size: 13px
+		font-weight: 400
+		line-height: 24px
+		text-transform: uppercase
+		padding: 7px 10px
+.product-choose
+	margin-top: 30px
+	p
+		+font-prop(14px, 700, uppercase)
+		color: #2f2f2f
+		display: block
+		margin: 10px 0
+		padding: 0 13px
+	select
+		color: #6f6e6e
+		font-size: 16px
+		display: inline-block
+
+.single-page-form
+	width: 540px
+	margin: 28px auto 120px
+	&__btn
+		@extend .flex-center
+		justify-content: center
+		+font-prop(16px, 700, none)
+		line-height: 55px
+		width: 100%
+		border: 1px solid $pink
+		background-color: $light
+		color: $pink
+		cursor: pointer
+		transition: all 0.2s
+		.bask
+			margin-right: 10px
+		&:hover
+			border: 1px solid $dark
+			color: $dark
+			font-size: 22px
+			box-shadow: 0 10px 15px rgba(100, 0, 0, 0.3)
+			transform: scale(1.03)
+		&:hover .bask
+			display: none

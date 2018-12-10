@@ -17,8 +17,7 @@
         <p class="logo__text">Bran<span class="logo__text_pink">d</span></p>
       </a>
       <div class="search-from dropdown">
-        <button class="search-from__button">Browse<i class="fas fa-caret-down"></i></button>
-        <div class="search-from__list list-dropdown dropdown-content">
+        <button class="search-from__button">Browse<i class="fas fa-caret-down"></i></button><div class="search-from__list list-dropdown dropdown-content">
           <p class="title-dropdown">Women</p>
           <ul>
             <li><a href="#">Dresses</a></li>
@@ -40,8 +39,7 @@
             <li><a href="#">Blazers</a></li>
             <li><a href="#">Jackets/vests</a></li>
           </ul>
-        </div>
-        <input class="search-from__input" type="text" placeholder="Search for Item..."><a class="search-from__icon" href="#"><i class="fa fa-search"></i></a>
+        </div><input class="search-from__input" type="text" placeholder="Search for Item..."><a class="search-from__icon" href="#"><i class="fa fa-search"></i></a>
       </div>
     </div>
 
@@ -164,13 +162,36 @@
 
 <section class="checkout">
   <div class="container">
+
     <div class="checkout-block">
       <h3>01. Shipping Adress</h3>
-      <h4>Check as a guest or register</h4>
-      <p>Register with us for future convenience</p>
-      <h4>register and save time!</h4>
-      <p>Register with us for future convenience</p>
+
+      <div class="checkout-block-content">
+        <form method="get" action="index.html" class="checkout-form">
+          <h4>Check as a guest or register</h4>
+          <p>Register with us for future convenience</p>
+          <input type="radio" name="register" id="guest" checked="checked"><span>checkout as guest</span><br>
+          <input type="radio" name="register" id="register"><span>register</span>
+          <h4>register and save time!</h4>
+          <p>Register with us for future convenience</p>
+          <i class="fas fa-angle-double-right fa-xs"></i><a href="#">Fast and easy checkout</a><br>
+          <i class="fas fa-angle-double-right fa-xs"></i><a href="#">Easy access to your order history and status</a>
+          <button class="checkout-button" type="submit">Continue</button>
+        </form>
+
+        <form method="get" action="index.html" class="checkout-form">
+          <h4>Already registed?</h4>
+          <p>Please log in below</p>
+          <h4>EMAIL ADDRESS</h4>
+          <input class="checkout-field" type="email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+          <h4>PASSWORD</h4>
+          <input class="checkout-field" type="password">
+          <p>* Required Fileds</p>
+          <button class="checkout-button" type="submit">Log in</button>
+        </form>
+      </div>
     </div>
+
     <div class="checkout-block">
       <h3>02. BILLING INFORMATION</h3>
     </div>
@@ -189,8 +210,6 @@
 
   </div>
 </section>
-
-
 
 <section class="subscribe">
   <div class="container subscribe-block">
