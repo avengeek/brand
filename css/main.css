@@ -1010,6 +1010,16 @@ input[type=range]:focus::-ms-fill-upper {
     .featurebox-img img {
       margin: 0 auto; }
 
+.product-name, .product-quantity, .product-price {
+  display: inline-block;
+  float: left; }
+
+.product-name {
+  width: 200px; }
+
+.product-quantity, .product-price {
+  width: 50px; }
+
 /* =============================================  Single page (v.1.0)  */
 .singlepage-slider {
   width: 100%;

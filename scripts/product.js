@@ -25,7 +25,7 @@ class Product {
         });
         let $price = $('<p/>', {
             class: 'product-box-price',
-            text: this.price
+            text: '$' + this.price + '.00'
         });
 
         let $buyBtn = $('<button/>', {
