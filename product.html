@@ -388,24 +388,13 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="scripts/product.js"></script>
-<script src="scripts/cart.js"></script>
+<!-- <script src="scripts/cart.js"></script> -->
 <script>
   $(document).ready(() => {
-    // Товары
-    let product1 = new Product(1, 'Mango People T-shirt 1', 52, "img/product/product1-1.jpg");
-    let product2 = new Product(2, 'Mango People T-shirt 2', 50, "img/product/product1-2.jpg");
-    let product3 = new Product(3, 'Mango People T-shirt 3', 58, "img/product/product1-3.jpg");
-    let product4 = new Product(4, 'Mango People T-shirt 4', 34, "img/product/product2-1.jpg");
-    let product5 = new Product(5, 'Mango People T-shirt 5', 51, "img/product/product2-2.jpg");
-    let product6 = new Product(6, 'Mango People T-shirt 6', 26, "img/product/product2-3.jpg");
-    let product7 = new Product(7, 'Mango People T-shirt 7', 70, "img/product/product3-1.jpg");
-    let product8 = new Product(8, 'Mango People T-shirt 8', 72, "img/product/product3-2.jpg");
-    let product9 = new Product(9, 'Mango People T-shirt 9', 90, "img/product/product3-3.jpg");
+    let products = new Products('scripts/product.json');
 
-    //Корзина
-    let cart = new Cart();
+    // let cart = new Cart();
 
-    //Добавление товара
     $('.buyBtn').click(e => {
       e.preventDefault();
       cart.addProduct(e.target);

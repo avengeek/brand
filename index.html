@@ -16,7 +16,8 @@
         <img src="img/logo.png" alt="Brand">
         <p class="logo__text">Bran<span class="logo__text_pink">d</span></p>
       </a>
-      <div class="search-from dropdown">
+      <div class="search-from">
+        <div class="dropdown">
         <button class="search-from__button">Browse<i class="fas fa-caret-down"></i></button><div class="search-from__list list-dropdown dropdown-content">
           <p class="title-dropdown">Women</p>
           <ul>
@@ -39,7 +40,7 @@
             <li><a href="#">Blazers</a></li>
             <li><a href="#">Jackets/vests</a></li>
           </ul>
-        </div><input class="search-from__input" type="text" placeholder="Search for Item..."><a class="search-from__icon" href="#"><i class="fa fa-search"></i></a>
+        </div></div><input class="search-from__input" type="text" placeholder="Search for Item..."><a class="search-from__icon" href="#"><i class="fa fa-search"></i></a>
       </div>
     </div>
 
@@ -176,87 +177,11 @@
   </div>
 </section>
 
-<section class="container product">
-  <h3 class="product-title">Featured Items</h3>
-  <p class="product-desc">Shop for items based on what we featured in this week</p>
-
-  
-      <a href="single_page.html">
-    <div class="product-box">
-      <img src="img/product/product-1.jpg" alt="">
-      <p class="product-box-name">Mango People T-shirt</p>
-      <p class="product-box-price">$52.00</p>
-      <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
-    </div>
-      </a>
-  
-
-  <a href="single_page.html">
-    <div class="product-box">
-      <img src="img/product/product-2.jpg" alt="">
-      <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
-      <p class="product-box-name">Mango People T-shirt Mango People T-shirt Mango People T-shirt</p>
-      <p class="product-box-price">$52.00</p>
-    </div>
-  </a>
-
-  <a href="single_page.html">
-    <div class="product-box">
-      <img src="img/product/product-3.jpg" alt="">
-      <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
-      <p class="product-box-name">Mango People T-shirt</p>
-      <p class="product-box-price">$52.00</p>
-    </div>
-  </a>
-
-  <a href="single_page.html">
-    <div class="product-box">
-      <img src="img/product/product-4.jpg" alt="">
-      <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
-      <p class="product-box-name">Mango People T-shirt</p>
-      <p class="product-box-price">$52.00</p>
-    </div>
-  </a>
-
-  <a href="single_page.html">
-    <div class="product-box">
-      <img src="img/product/product-5.jpg" alt="">
-      <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
-      <p class="product-box-name">Mango People T-shirt</p>
-      <p class="product-box-price">$52.00</p>
-    </div>
-  </a>
-
-  <a href="single_page.html">
-    <div class="product-box">
-      <img src="img/product/product-6.jpg" alt="">
-      <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
-      <p class="product-box-name">Mango People T-shirt</p>
-      <p class="product-box-price">$52.00</p>
-    </div>
-  </a>
-
-  <a href="single_page.html">
-    <div class="product-box">
-      <img src="img/product/product-7.jpg" alt="">
-      <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
-      <p class="product-box-name">Mango People T-shirt</p>
-      <p class="product-box-price">$52.00</p>
-    </div>
-  </a>
-
-  <a href="single_page.html">
-    <div class="product-box">
-      <img src="img/product/product-8.jpg" alt="">
-      <button><img class="basket" src="img/icons/basket-w.svg" alt="Add to Cart">Add to Cart</button>
-      <p class="product-box-name">Mango People T-shirt</p>
-      <p class="product-box-price">$52.00</p>
-    </div>
-  </a>
+<section id="product" class="container product"></section>
 
   <button class="btn browse-products">Browse All Products<i class="fas fa-long-arrow-alt-right"></i></button>
 
-</section>
+<div id="cart-box" class="cart-box"></div>
 
 <section class="container feature cf">
   <div class="feature-title">
@@ -353,6 +278,17 @@
     </div>
   </div>
 </footer>
+
+<script src="scripts/jquery-3.3.1.js"></script>
+<script src="scripts/cart.js"></script>
+<script src="scripts/index.js"></script>
+<script>
+    $(document).ready(() => {
+        let products = new Products('scripts/product.json');
+        $('button.buyBtn').text('Купить');
+        
+    });
+</script>
 
 </body>
 </html>

@@ -1,13 +1,21 @@
-class Product {
-    constructor(id, title, price, img){
-        this.id = id;
-        this.title = title;
-        this.price = price;
-        this.img = img;
+class Products {
+    constructor(source){
+        this.source = source;
         this.container = '#product';
-        this._render(this.container);
+        this.items = []; //Массив со всеми товарами
+        this._init();
     }
-    _render(container){
+    _init(){
+        fetch(this.source)
+            .then(result => result.json())
+            .then(data => {
+                for (let product of data.producti){
+                    this.items.push(product);
+                    this._renderItem(product);
+                }
+            })
+    }
+    _renderItem(product){
         let $wrapper = $('<a/>', {
             href: 'single_page.html'
         });
@@ -16,24 +24,24 @@ class Product {
         });
 
         let $img = $('<img/>', {
-            src: this.img,
-            alt: this.title
+            src: product.pr_img,
+            alt: product.pr_title
         });
         let $name = $('<p/>', {
             class: 'product-box-name',
-            text: this.title
+            text: product.pr_title
         });
         let $price = $('<p/>', {
             class: 'product-box-price',
-            text: '$' + this.price + '.00'
+            text: '$' + product.pr_price + '.00'
         });
 
         let $buyBtn = $('<button/>', {
             class: 'buyBtn',
             text: 'Add to Cart',
-            'data-id': this.id,
-            'data-price': this.price,
-            'data-name': this.title
+            'data-id': product.pr_id,
+            'data-price': product.pr_price,
+            'data-name': product.pr_title
         });
 
         // Создание структуры
@@ -42,7 +50,11 @@ class Product {
         $name.appendTo($desc);
         $price.appendTo($desc);
         $desc.appendTo($wrapper);
-        $(container).append($wrapper);
+        $(this.container).append($wrapper);
+        $(`.buyBtn[data-id="${product.pr_id}"]`).click(e => {
+          e.preventDefault();
+          cart.addProduct(e.target);
+        });
     }
 }
 

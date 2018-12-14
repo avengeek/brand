@@ -23,18 +23,11 @@ class Cart {
         $totalPrice.appendTo($(this.container));
     }
     _init(){
+        console.log(this.source);
         this._render();
-        fetch(this.source)
-            .then(result => result.json())
-            .then(data => {
-                for (let product of data.contents){
-                    this.cartItems.push(product);
-                    this._renderItem(product);
-                }
-                this.countGoods = data.countGoods;
-                this.amount = data.amount;
-                this._renderSum();
-            })
+        this.cartItems.push(this.source);
+        this._renderItem(this.source);
+        this._renderSum();
     }
     _renderSum(){
         $('.sum-goods').text(`Всего товаров в корзине: ${this.countGoods}`);
@@ -43,21 +36,21 @@ class Cart {
     _renderItem(product){
         let $container = $('<div/>', {
             class: 'cart-item',
-            'data-product': product.id_product
+            'data-product': product.pr_id
         });
-        $container.append($(`<p class="product-name">${product.product_name}</p>`));
+        $container.append($(`<p class="product-name">${product.pr_title}</p>`));
         $container.append($(`<p class="product-quantity">${product.quantity}</p>`));
-        $container.append($(`<p class="product-price">${product.price} $</p>
-            <i id="id${product.id_product}" class="fa fa-times-circle" aria-hidden="true"></i><br>`));
+        $container.append($(`<p class="product-price">${product.pr_price} $</p>
+            <i id="id${product.pr_id}" class="fa fa-times-circle" aria-hidden="true"></i><br>`));
         $container.appendTo($('.cart-items-wrap'));
-        $(`#id${product.id_product}`).click(e => {
+        $(`#id${product.pr_id}`).click(e => {
           this._remove(e.target.parentElement.attributes[1].value);
         })
     }
     _updateCart(product){
-        let $container = $(`div[data-product="${product.id_product}"]`);
+        let $container = $(`div[data-product="${product.pr_id}"]`);
         $container.find('.product-quantity').text(product.quantity);
-        $container.find('.product-price').text(`${product.quantity * product.price} $`);
+        $container.find('.product-price').text(`${product.quantity * product.pr_price} $`);
     }
     addProduct(element){
         let productId = +$(element).data('id');
